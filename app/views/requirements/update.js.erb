@@ -1,0 +1,7 @@
+$('.calendar').fullCalendar('removeRequirements', [<%= @requirement.id %>]);
+$('.calendar').fullCalendar(
+  'renderRequirement', 
+  $.parseJSON("<%=j render(@requirement, format: :json).html_safe %>"), 
+  true
+);
+$('.modal').modal('hide');
