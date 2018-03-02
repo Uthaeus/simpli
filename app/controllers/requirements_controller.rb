@@ -14,10 +14,10 @@ class RequirementsController < ApplicationController
   end
 
   def new
-    @requirements_array = []
+    @title = []
     @vaccinations = Vaccination.all
     @vaccinations.each do |vacc|
-      @requirements_array << vacc.title
+      @title << vacc.title
     end
     @requirement = Requirement.new
   end
