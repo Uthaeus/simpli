@@ -18,6 +18,6 @@ class User < ApplicationRecord
 
   PHONE_REGEX = /\A[0-9]*\Z/
 
-  validates_format_of :phone_number, with: PHONE_REGEX
-  validates :phone_number, length: { is: 10 }
+  validates_format_of :phone, with: PHONE_REGEX
+  validates :phone, length: { is: 10 }
 end

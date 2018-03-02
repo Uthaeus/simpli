@@ -3,6 +3,7 @@
 <% if current_user %>
   <%= link_to 'Client Form', new_requirement_path %>
   <%= link_to 'Requirements', requirements_path %>
+  <%= link_to 'Vaccinations', vaccinations_path %>
   <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
   <%= link_to 'Edit Profile', edit_user_registration_path(current_user) %>
 <% else %>
