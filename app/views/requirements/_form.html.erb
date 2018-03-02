@@ -14,12 +14,13 @@
 
   <% @title.each do |item| %>
     <div class="form-inputs">
-      <%= form.input :title, value: "#{item}" %>
+      <%= form.input :title, input_html: { value: "#{item}" } %>
       <%= form.input :date_range, input_html: { class: "form-control input-sm date-range-picker" } %>
       <%= form.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden' %>
       <%= form.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden' %>
+      <%= form.button :submit %>
     </div>
 
   <% end %>
-  <%= form.button :submit %>
+  
 <% end %>
