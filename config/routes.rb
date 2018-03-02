@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  resources :vaccinations
+  
   get 'pages/home'
 
   get 'pages/form'
