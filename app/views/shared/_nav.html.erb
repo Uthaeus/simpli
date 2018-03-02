@@ -1,7 +1,7 @@
 
 <%= link_to 'Home', root_path %>
 <% if current_user %>
-  <%= link_to 'Client Form', pages_form_path %>
+  <%= link_to 'Client Form', clients_requirements_path %>
   <%= link_to 'Requirements', requirements_path %>
   <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
   <%= link_to 'Edit Profile', edit_user_registration_path(current_user) %>
