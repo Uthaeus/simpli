@@ -1,4 +1,5 @@
-<%= form_with(model: requirement, local: true) do |form| %>
+
+<%= simple_form_for @requirement, remote: true do |form| %>
   <% if requirement.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(requirement.errors.count, "error") %> prohibited this requirement from being saved:</h2>
@@ -12,23 +13,13 @@
   <% end %>
 
   <% @title.each do |item| %>
-    <div class="field">
-      <%= form.label :title %>
-      <%= form.text_field :title, id: :requirement_title, value: "#{item}" %>
+    <div class="form-inputs">
+      <%= form.input :title, value: "#{item}" %>
+      <%= form.input :date_range, input_html: { class: "form-control input-sm date-range-picker" } %>
+      <%= form.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden' %>
+      <%= form.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden' %>
     </div>
 
-    <div class="field">
-      <%= form.label :start %>
-      <%= form.text_area :start, id: :requirement_start %>
-    </div>
-
-    <div class="field">
-      <%= form.label :end %>
-      <%= form.text_area :end, id: :requirement_end %>
-    </div>
-
-    <div class="actions">
-      <%= form.submit %>
-    </div>
   <% end %>
+  <%= form.button :submit %>
 <% end %>
