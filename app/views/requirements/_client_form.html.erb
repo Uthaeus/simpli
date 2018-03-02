@@ -1,0 +1,20 @@
+<%= form_with(model: requirement, local: true) do |form| %>
+  <% @requirements.each do |req| %>
+    <div>
+      <div>
+        <%= req.title %>
+      </div>
+
+      <div class="field">
+        <%= form.label :start %>
+        <%= form.text_area :start, id: :requirement_start %>
+      </div>
+
+      <div class="field">
+        <%= form.label :end %>
+        <%= form.text_area :end, id: :requirement_end %>
+      </div>
+    </div>
+
+  <% end %>
+<% end %>

@@ -3,5 +3,6 @@ class PagesController < ApplicationController
   end
 
   def form
+    @requirements = Requirement.all 
   end
 end
