@@ -60,6 +60,6 @@ class RequirementsController < ApplicationController
     end
 
     def requirement_params
-      params.require(:requirement).permit(:title, :start, :end)
+      params.require(:requirement).permit(:title, :date_range, :start, :end)
     end
 end

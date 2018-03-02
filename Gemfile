@@ -51,5 +51,13 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.4', '>= 4.4.1'
 gem 'bootstrap-datepicker-rails', '~> 1.7', '>= 1.7.1.1'
-gem 'bootstrap', '~> 4.0.0'
 gem 'simple_form', '~> 3.5', '>= 3.5.1'
+gem 'momentjs-rails', '~> 2.17', '>= 2.17.1'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'fullcalendar-rails', '~> 3.4'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
+
+
+
+
