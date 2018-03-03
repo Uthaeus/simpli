@@ -14,3 +14,26 @@
  *= require_tree .
  *= require_self
  */
+
+.req-inputs {
+  display: flex;
+
+}
+
+.req-title {
+  width: 300px;
+}
+
+.req-datepicker {
+  width: 85px;
+}
+
+.req-date {
+  display: flex;
+}
+
+.req-ind-date {
+  width: 90px;
+  margin: 10px;
+  float: right;
+}
