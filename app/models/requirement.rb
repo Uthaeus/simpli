@@ -2,6 +2,7 @@ class Requirement < ApplicationRecord
   validates :title, presence: true
   attr_accessor :date_range
   belongs_to :user
+  has_many :vaccinations
 
   scope :requirements_by, ->(user) { where(user_id: user.id) }
 

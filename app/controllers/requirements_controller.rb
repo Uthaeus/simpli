@@ -14,11 +14,11 @@ class RequirementsController < ApplicationController
   end
 
   def new
-    @title = []
+    # @title = []
     @vaccinations = Vaccination.all
-    @vaccinations.each do |vacc|
-      @title << vacc.title
-    end
+    # @vaccinations.each do |vacc|
+    #   @title << vacc.title
+    # end
     @requirement = Requirement.new
   end
 
@@ -27,6 +27,7 @@ class RequirementsController < ApplicationController
 
   def create
     @requirement = Requirement.new(requirement_params)
+    @requirement.user_id = current_user.id
 
     respond_to do |format|
       if @requirement.save
