@@ -56,6 +56,7 @@ gem 'momentjs-rails', '~> 2.17', '>= 2.17.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'fullcalendar-rails', '~> 3.4'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'cocoon', '~> 1.2', '>= 1.2.11'
 
 
 

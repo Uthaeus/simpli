@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :requirements
   has_many :vaccinations, :through => :requirements
 
+  accepts_nested_attributes_for :requirements
+
   def first_name
     self.name.split.first
   end
