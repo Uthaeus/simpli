@@ -7,7 +7,6 @@ class User < ApplicationRecord
   validates_presence_of :name 
 
   has_many :requirements
-  has_many :vaccinations, :through => :requirements
 
   accepts_nested_attributes_for :requirements
 
