@@ -12,24 +12,25 @@
     </div>
   <% end %>
 
-  <% @vaccinations.each do |vacc| %>
-    <div class="form-inputs req-inputs">
-      <div class='req-title'>
-        <%= form.input :title, input_html: { value: "#{vacc.title}" } %>
-      </div>
-      <div class='req-datepicker'>
-        <%= form.input :date_range, input_html: { class: "form-control input-sm date-range-picker" } %>
-      </div>
-      <div class='req-date'>
-        <%= form.input_field :start, value: Date.today, class: 'form-control input-sm start_hidden req-ind-date' %>
-        <%= form.input_field :end, value: Date.today, class: 'form-control input-sm end_hidden req-ind-date' %>
-      </div>     
-    </div>
-  <% end %>
-  
-  <%= form.button :submit %>
-  
-<% end %>
 
+  <div class="form-inputs req-inputs">
+    <div class='req-title'>
+      <%= form.input :title %>
+    </div>
+    <div class='req-datepicker'>
+      <%= form.input :date_range, input_html: { class: "form-control input-sm date-range-picker" } %>
+    </div>
+    <div class='req-date'>
+      <%= form.input_field :start, value: Date.today, class: 'form-control input-sm start_hidden req-ind-date' %>
+      <%= form.input_field :end, value: Date.today, class: 'form-control input-sm end_hidden req-ind-date' %>
+    </div>     
+  </div>
+  <%= form.button :submit %>
+<% end %>
+  
+  
+  
+
+<!-- , input_html: { value: "#{vacc.title}" } -->
 <!--  as: :hidden,  -->
 <!-- , input_html: { value: "#{@vaccinations[0].title}" } -->
